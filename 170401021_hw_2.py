@@ -1,4 +1,12 @@
 import csv
+def bubbleSort(list_1):
+    for i in range(len(list_1)-1):
+        for j in range(len(list_1)-1):
+            if list_1[j]>list_1[j+1]:
+                temp = list_1[j]
+                list_1[j]=list_1[j+1]
+                list_1[j+1]=temp
+
 def ortalama(list):
     top,index=0,0
     leng = len(list)
@@ -45,6 +53,7 @@ for key, value in a.items():
     toplam=toplam+value
     index=index+1
     values.append(value)
+bubbleSort(values)
 
 ort = toplam//index
 result = 0
