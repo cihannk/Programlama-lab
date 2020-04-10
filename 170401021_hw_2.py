@@ -1,4 +1,5 @@
 import csv
+import sys
 def bubbleSort(list_1):
     for i in range(len(list_1)-1):
         for j in range(len(list_1)-1):
@@ -33,7 +34,7 @@ def histo(array):
             dic[i]=dic[i]+1
     return dic
 
-with open("input_dir_name/input_hw_2.csv", "r") as file:
+with open("sys.argv[1]+"\input_hw_2.csv", "r") as file:
     reader = csv.reader(file,delimiter = ';')
     mainarray= []
     for row in reader:
@@ -63,7 +64,7 @@ if index %2 == 1:
 medyan=values[result]
 stringg = f"ortalama: {ort} \nmedyan: {medyan}"
 
-txtdosyasi = open("output_dir_name/170401021_hw_2_output.txt","w")
+txtdosyasi = open(sys.argv[2]+"\170401021_hw_2_output.txt","w")
 txtdosyasi.write(stringg)
 txtdosyasi.close()
 
